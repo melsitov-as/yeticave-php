@@ -1,7 +1,7 @@
 <?php
-$is_auth = rand(0, 1);
+//$is_auth = rand(0, 1);
 
-$user_name = 'Саша'; // укажите здесь ваше имя
+//$user_name = 'Ярослав'; // укажите здесь ваше имя
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -19,7 +19,7 @@ $user_name = 'Саша'; // укажите здесь ваше имя
         <header class="main-header">
             <div class="main-header__container container">
                 <h1 class="visually-hidden">YetiCave</h1>
-                <a class="main-header__logo">
+                <a class="main-header__logo" href="index.php">
                     <img src="../img/logo.svg" width="160" height="39" alt="Логотип компании YetiCave">
                 </a>
                 <form class="main-header__search" method="get" action="https://echo.htmlacademy.ru" autocomplete="off">
@@ -60,7 +60,7 @@ $user_name = 'Саша'; // укажите здесь ваше имя
                 <!--заполните этот список из массива категорий-->
                 <?php foreach ($categories as $category) : ?>
                     <li class="nav__item">
-                        <a href="pages/all-lots.html"><?= $category; ?></a>
+                        <a href="pages/all-lots.html"><?= $category["name_category"]; ?></a>
                     </li>
                 <?php endforeach; ?>
             </ul>

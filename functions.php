@@ -13,6 +13,11 @@ function format_num($num)
     return "$num ₽";
 }
 
+//function console_log( $data ){
+//    echo '<script>';
+//    echo 'console.log('. json_encode( $data ) .')';
+//    echo '</script>';
+//    }
 
 /**
  * Возвращеет количество целых часов и остатка минут от настоящего времени до даты
@@ -32,6 +37,7 @@ function get_time_left($date)
     $minutes = intval($arr[2]);
     $hours = str_pad($hours, 2, "0", STR_PAD_LEFT);
     $minutes = str_pad($minutes, 2, "0", STR_PAD_LEFT);
+
     $res[] = $hours;
     $res[] = $minutes;
 

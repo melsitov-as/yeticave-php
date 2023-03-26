@@ -6,6 +6,8 @@ require_once("init.php");
 require_once("models.php");
 
 
+
+
 if (!$con) {
     $error = mysqli_connect_error();
 } else {
@@ -40,3 +42,19 @@ $layout_content = include_template("layout.php", [
 ]);
 
 print($layout_content);
+
+
+// Лайф-7
+// Cookies
+// $name = "visitcount";
+// $value = 1;
+// $expire = "Mon, 25-Jan-2027 10:00:00 GMT";
+// $path = "/";
+
+// setcookie($name, $value, $expire, $path);
+
+// if (isset($_COOKIE['visitcount'])) {
+//     print($_COOKIE['visitcount']);
+// }
+// Fatal error: Uncaught TypeError: setcookie(): Argument 
+#3 ($expires_or_options) must be of type array|int, string given in C:\OpenServer\domains\yeticave-htmlacademy\index.php:54 Stack trace: #0 C:\OpenServer\domains\yeticave-htmlacademy\index.php(54): setcookie() #1 {main} thrown in C:\OpenServer\domains\yeticave-htmlacademy\index.php on line 54

@@ -52,7 +52,8 @@
 //         "expiration" => "2021-08-15"
 //     ],
 // ];
-$is_auth = rand(0, 1);
+// $is_auth = rand(0, 1);
+$is_auth = 0;
 
 $user_name = 'Ярослав';
 //console_log($user_name);

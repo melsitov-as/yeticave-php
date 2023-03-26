@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             "errors" => $errors
         ]);
     } else {
-        $sql = get_query_create_lot(2);
+        $sql = get_query_create_lot($user_id);
         $stmt = db_get_prepare_stmt_version($con, $sql, $lot);
         $res = mysqli_stmt_execute($stmt);
 
@@ -114,4 +114,10 @@ $layout_content = include_template("layout.php", [
 
 
 // print($page_head);
-print($layout_content);
+if ($is_auth) {
+    print($layout_content);
+} else {
+    http_response_code();
+    http_response_code(403);
+    var_dump(http_response_code());
+}

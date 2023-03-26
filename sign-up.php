@@ -100,6 +100,10 @@ $layout_content = include_template("layout.php", [
     "user_name" => $user_name
 ]);
 
-
-
-print($layout_content);
+if ($is_auth) {
+    http_response_code();
+    http_response_code(403);
+    var_dump(http_response_code());
+} else {
+    print($layout_content);
+}

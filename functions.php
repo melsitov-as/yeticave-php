@@ -103,11 +103,12 @@ function db_get_prepare_stmt_version($link, $sql, $data = [])
 function get_arrow($result_query)
 {
     $row = mysqli_num_rows($result_query);
-    if ($row === 1) {
-        $arrow = mysqli_fetch_assoc($result_query);
-    } else if ($row > 1) {
-        $arrow = mysqli_fetch_all($result_query, MYSQLI_ASSOC);
-    }
+    $arrow = mysqli_fetch_all($result_query, MYSQLI_ASSOC);
+    // if ($row === 1) {
+    //     $arrow = mysqli_fetch_all($result_query, MYSQLI_ASSOC);
+    // } else if ($row > 1) {
+    //     $arrow = mysqli_fetch_all($result_query, MYSQLI_ASSOC);
+    // }
 
     return $arrow;
 }
